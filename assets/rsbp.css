@@ -1,0 +1,20 @@
+table.bulk-prices {
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+table.bulk-prices th,
+table.bulk-prices td {
+	padding: 3px 5px;
+	border: 1px solid #b4b4b4;
+}
+
+table.bulk-prices .range {
+	text-align: left;
+}
+table.bulk-prices .amount {
+	padding-left: 20px;
+	text-align: right;
+}
