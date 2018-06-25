@@ -10,8 +10,14 @@ function rsbp_update_cart_item_price( $cart ) {
 	foreach ( $cart->get_cart_contents() as $cart_item_key => $value ) {
 		$discount = ld_woo_get_item_data( $cart_item_key, 'bulk_discount' );
 		
+		$original_price = ld_woo_get_item_data( $cart_item_key, 'rs_original_price' );
 		
-		$value['data']->set_price( $value['data']->get_price() - $discount );
+		if ( empty($original_price) ) {
+			$original_price = $value['data']->get_price();
+			ld_woo_set_item_data( $cart_item_key, 'rs_original_price', $original_price );
+		}
+		
+		$value['data']->set_price( $original_price - $discount );
 	}
 }
 add_action( 'woocommerce_before_calculate_totals', 'rsbp_update_cart_item_price' );
