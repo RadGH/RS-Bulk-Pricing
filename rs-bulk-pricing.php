@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: RS Bulk Pricing
-Version:     1.0.0
+Version:     1.0.1
 Plugin URI:  http://radleysustaire.com/
 Description: Allows you to set bulk pricing classes which offer automatic discounts when purchasing multiple products.
 Author:      Radley Sustaire
@@ -13,7 +13,7 @@ if ( !defined( 'ABSPATH' ) ) exit;
 
 define( 'RSBP_URL', untrailingslashit(plugin_dir_url( __FILE__ )) );
 define( 'RSBP_PATH', dirname(__FILE__) );
-define( 'RSBP_VERSION', '1.0.0' );
+define( 'RSBP_VERSION', '1.0.1' );
 
 add_action( 'plugins_loaded', 'rsbp_init_plugin' );
 register_activation_hook( __FILE__, 'rsbp_plugin_activate' );
