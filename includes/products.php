@@ -32,7 +32,7 @@ function rsbp_add_bulk_price_select_field() {
 				<option value="<?php echo esc_attr( $opt_value ); ?>" <?php selected( $bulk_price_id, $opt_value ); ?>><?php echo esc_html( $opt_name ); ?></option>
 				<?php
 			endwhile;
-			wp_reset_postdata();
+			wp_reset_query();
 			?>
 		</select> <img class="help_tip" data-tip='<?php echo 'To add or modify bulk pricing groups, use the Bulk Pricing menu in the left sidebar.' ?>' src="<?php echo $woocommerce->plugin_url(); ?>/assets/images/help.png" height="16" width="16" />
 	</p>
